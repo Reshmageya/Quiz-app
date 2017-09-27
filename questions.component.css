@@ -1,0 +1,41 @@
+.center-align{
+text-align: center;
+margin-top: 30px;
+}
+.container{
+border-top: 30px solid #77B9FC;
+height: auto;
+border-bottom: 1px solid grey;
+border-left: 1px solid grey;
+border-right: 1px solid grey;
+text-align: center;
+background-color: #F6F6F6;
+}
+.topic{
+    font-size: 35px;
+    margin-top: 20px;
+
+}
+.qustnumber{
+   
+    margin-left: 1020px;
+    margin-top: 30px;
+    font-size: 12px;
+}
+.questions{
+    text-align: left;
+    margin-top: 20px;
+}
+.options{
+    margin-top: 20px;
+    font-size: 15px;
+}
+.button{
+    margin:35px;
+    font-size: 40px;
+}
+.qusopt{
+    background-color: white;
+    height: 200px;
+    padding-top: 20px;
+}

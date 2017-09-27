@@ -1,0 +1,18 @@
+<div class="quizSection col-md-12" *ngIf="!hideDiv">
+  <div class="quizImg col-md-4">
+    <img src="assets/images/quizMen.jpg" alt="Img not supported">
+  </div>
+  <div class="quizInstruction col-md-8">
+   <div class="quizHeading text-center"> Quiz Instructions</div>
+     <ul class="listInstruction">
+       <li>Click the Start Button to start the Quiz</li>
+       <li>Each Question Carry 1 mark</li>
+       <li>No Negative Marking</li>
+     </ul>
+     <button class="btn btn-success startButton" (click)="start()">
+      <a [routerLink]="['questions']"> Start</a>
+       
+     </button>
+
+  </div>
+</div>

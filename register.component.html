@@ -1,0 +1,60 @@
+<div class="form-box">
+    <div  class="text-center login-heading">Do Registration</div>
+<form [formGroup]="formGroup"  (ngSubmit)="onLogin(formGroup.value)">
+  <div class="form-group">
+    <label for="firstName">firstName:</label>
+    <input class="form-control" name="firstName" [formControl]="firstName">
+    <small *ngIf="!formGroup.controls['firstName'].valid && formGroup.controls['firstName'].touched">
+        enter firstName
+    </small>
+  </div>
+  <div class="form-group">
+      <label for="lastName">lastName:</label>
+      <input class="form-control" name="lastName" [formControl]="lastName">
+      <small *ngIf="!formGroup.controls['lastName'].valid && formGroup.controls['lastName'].touched">
+          enter LastName
+      </small>
+    </div>
+    <div class="form-group">
+        <label for="userName">userName:</label>
+        <input class="form-control" name="userName" [formControl]="userName">
+        <small *ngIf="!formGroup.controls['userName'].valid && formGroup.controls['userName'].touched">
+            enter valid userName
+        </small>
+      </div>
+      <div class="form-group">
+          <label for="email">Email addresses:</label>
+          <input type="email" class="form-control" name="email" [formControl]="email" />
+          <small *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+            enter valid email(having @accenture.com only)
+        </small>
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="mobileNumber" class="form-control" name="mobileNumber" [formControl]="mobileNumber" />
+            <small *ngIf="!formGroup.controls['mobileNumber'].valid && formGroup.controls['mobileNumber'].touched">
+              enter valid mobileNumber
+          </small>
+          </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input class="form-control" type="password" name="password" [formControl]="password">
+    <small *ngIf="!formGroup.controls['password'].valid && formGroup.controls['password'].touched">
+        enter valid Password
+    </small> 
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword">Confirm Password:</label>
+    <input class="form-control" type="confirmPassword" name="confirmpassword" [formControl]="confirmPassword">
+    <small *ngIf="!formGroup.controls['confirmPassword'].valid && formGroup.controls['confirmPassword'].touched">
+         Password doesn't match
+    </small>
+  </div>
+
+
+  <button class="btn btn-success" [disabled]="!formGroup.valid">
+    <a [routerLink]="['login']">Register</a>
+  </button>
+  <a  class="btn btn-success" [routerLink]="['login']">cancel</a>
+</form>
+</div>

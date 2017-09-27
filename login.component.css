@@ -1,0 +1,22 @@
+
+.form-box{
+    background-color: #6262A1;
+    width:40%;
+    background-image: url("/assets/images/quizImg.jpeg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:25px;
+}
+
+
+.login-heading{
+    font-size: 40px;
+}
+
+.incorrectClass{
+    color:red;
+}

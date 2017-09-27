@@ -1,0 +1,37 @@
+<div class="well " *ngIf="authenticationService.getUser()">
+    Logged in as <b>{{ authenticationService.getUser() }}</b>
+    <a href (click)="logout()">Log out</a>
+    <!-- <a [routerLink]="['quiz']"></a> -->
+     <app-quiz></app-quiz>
+  </div>
+<div class="bodyContent" *ngIf="!hideDiv">
+<div class="form-box">
+    <div  class="text-center login-heading">Login to Your Account</div>
+<form [formGroup]="formGroup" *ngIf="!authenticationService.getUser()">
+  <div class="form-group">
+    <label for="userName">User:</label>
+    <input class="form-control" name="userName" [formControl]="userName">
+    <small *ngIf="!formGroup.controls['userName'].valid && formGroup.controls['userName'].touched ">
+        enter valid userName
+    </small>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input class="form-control" type="password" name="password" [formControl]="password">
+    <small *ngIf="!formGroup.controls['password'].valid && formGroup.controls['password'].touched ">
+        enter valid Password
+    </small>
+  </div>
+  <div class="incorrectClass" *ngIf="showHide">
+    {{message}}
+  </div>
+  <button class="btn btn-default" [disabled]="!formGroup.valid" (click)="login(userName.value,password.value)">
+    Login
+    
+  </button>
+  <a [routerLink]="['register']">Register</a>
+</form>
+</div>
+</div>
+<router-outlet></router-outlet>
